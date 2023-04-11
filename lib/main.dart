@@ -37,54 +37,42 @@ class MyApp extends StatelessWidget {
                 fontSize: 30.0,
               ),
             ),
-            Card(
-              color: Colors.white,
-              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-              child: Padding(
-                padding: EdgeInsets.all(20.0),
-                child: Row(
-                  children: <Widget>[
-                    Icon(
-                      Icons.phone,
-                      color: Colors.teal,
-                      size: 30,
-                    ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Text(
-                      '+47 123456789',
-                      style: TextStyle(
-                          color: Colors.teal.shade900, fontSize: 30.0),
-                    )
-                  ],
-                ),
+            SizedBox(
+              height: 20.0,
+              width: 150.0,
+              child: Divider(
+                color: Colors.white,
+                thickness: 1.5,
               ),
             ),
             Card(
-              color: Colors.white,
-              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-              child: Padding(
-                padding: EdgeInsets.all(20.0),
-                child: Row(
-                  children: <Widget>[
-                    Icon(
-                      Icons.email,
-                      color: Colors.teal,
-                      size: 30,
-                    ),
-                    SizedBox(
-                      width: 10.0,
-                    ),
-                    Text(
-                      'dilanka@gmail.com',
-                      style: TextStyle(
-                          color: Colors.teal.shade900, fontSize: 30.0),
-                    )
-                  ],
-                ),
-              ),
-            ),
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    '+11 1234567890',
+                    style:
+                        TextStyle(fontSize: 30.0, color: Colors.teal.shade900),
+                  ),
+                )),
+            Card(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    'dilanka@gmail.com',
+                    style:
+                        TextStyle(color: Colors.teal.shade900, fontSize: 30.0),
+                  ),
+                )),
           ],
         )),
       ),
