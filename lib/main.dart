@@ -4,33 +4,49 @@ void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatefulWidget {
-  @override
-  _MyAppState createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  int clicks = 0;
-
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.teal,
-        appBar: AppBar(
-          backgroundColor: Colors.red,
-          title: Text('Demo app'),
-        ),
-        body: Center(
-          child: Text('Number of clicks:  $clicks'),
-        ),
-        floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.add),
-          onPressed: () {
-            setState(() {
-              clicks++;
-            });
-          },
+        body: SafeArea(
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: <Widget>[
+              Container(
+                width: 100,
+                color: Colors.red,
+                child: Text('Hello'),
+              ),
+              Container(
+                width: 230,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Container(
+                      width: 100,
+                      height: 100,
+                      color: Colors.yellow,
+                      child: Text('Hello'),
+                    ),
+                    Container(
+                      width: 100,
+                      height: 100,
+                      color: Colors.green,
+                      child: Text('Hello'),
+                    )
+                  ],
+                ),
+              ),
+              Container(
+                width: 100,
+                color: Colors.blue,
+                child: Text('Hello'),
+              ),
+            ],
+          ),
         ),
       ),
     );
